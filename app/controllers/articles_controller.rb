@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
     render json: @channel_articles, stats: 200
   end
 
-  def news_search
+  def articles_search
     @search = Filter.create(article_params)
 
     response = Faraday..get 'https://newsapi.org/v2/everything?' do |req|
