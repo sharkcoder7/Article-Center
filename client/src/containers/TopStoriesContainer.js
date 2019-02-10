@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from '../components/article';
+import Articles from '../components/articles';
 import { connect } from 'react-redux';
 import { fetchTopStories } from '../actions/articleActions';
 
@@ -9,13 +10,13 @@ class TopStoriesContainer extends Component {
   }
 
   componentWillUnmount() {
-
+    clearInterval(this.interval);
   }
 
   render() {
     return(
       <div>
-        <Article />
+        <Articles articles={this.props.topStories}/>
         
       </div>  
     )

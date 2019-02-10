@@ -16,6 +16,7 @@ const Navbar = () => {
         </div>
         <div className="ui hidden divider"></div>
         <Route exact path="/" component={TopStoriesContainer} />
+        <Route exact path="/channels" component={TopStoriesContainer} />
 
     </div>
     </Router>
