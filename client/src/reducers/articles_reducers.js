@@ -3,6 +3,7 @@ export default function articleReducer (
     loading: false,
     topStories: [],
     channels: [],
+    channelArticles: [],
   },
   action
 ) {
@@ -16,8 +17,12 @@ export default function articleReducer (
 
     case 'FETCH_CHANNELS':
       return {...state, loading: false, channels: action.payload.sources}
+
+    case 'FETCH_CHANNEL_ARTICLES':
+      return {...state, loading: false, channelArticles: action.payload.articles}
+      
     default:
-    return state;
+      return state;
 
   }
 }

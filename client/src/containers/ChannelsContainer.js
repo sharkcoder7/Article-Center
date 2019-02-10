@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchChannels } from '../actions/articleActions';
 
 
-class ChannelsContainer extends Coponent {
+class ChannelsContainer extends Component {
   componentDidMount() {
     this.props.fetchChannels()
   }
@@ -20,7 +20,7 @@ class ChannelsContainer extends Coponent {
 
 
 const mapStateToProps = state => {
-  return {articles: state.articles.sources}
+  return {articles: state.sources}
 }
 
 

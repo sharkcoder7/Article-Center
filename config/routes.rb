@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     resources :articles
       get '/topStories', to: 'articles#topStories'
       get '/channels', to: 'articles#channels'
-      get '/channels/:channel/:page', to: 'articles#channel_articles'
+      get '/channels/:channel', to: 'articles#channel_articles'
   end
 end

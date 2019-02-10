@@ -24,8 +24,9 @@ class ArticlesController < ApplicationController
   def channel_articles
     response = Faraday.get 'https://newsapi.org/v2/everything?' do |req|
       req.params['apiKey'] = ENV['SECRET_KEY']
-      req.params['country'] = 'us'
+      req.params['language'] = 'en'
       req.params['pageSize'] = 100
+      req.params['sources'] = params[:channel]
       
     end
     @channel_articles = JSON.parse(response.body)

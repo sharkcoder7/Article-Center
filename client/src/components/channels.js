@@ -8,11 +8,13 @@ class Channels extends Component {
   }
 
   render() {
+    return (
     <div id ="channels">
       <div className="ui list">
       {this.renderSources()}
       </div>
     </div>
+    )
   }
 }
 
@@ -22,4 +24,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateTopProps)(Channels);
+export default connect(mapStateToProps)(Channels);
