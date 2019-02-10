@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import HeadlinesContainer from '../containers/TopStoriesContainer';
-import ChannelArticlesContainer from '../containers/ChannelArticlesContainer';
+import TopStoriesContainer from '../containers/TopStoriesContainer';
+//import ChannelArticlesContainer from '../containers/ChannelArticlesContainer';
 
 const Navbar = () => {
   return(
@@ -16,8 +16,7 @@ const Navbar = () => {
         </div>
         <div className="ui hidden divider"></div>
         <Route exact path="/" component={TopStoriesContainer} />
-        <Route exact path="/channel" component={ChannelsContainer} />
-        <Route exact path="/channel/:id" component={ChannelArticlesContainer} />
+
     </div>
     </Router>
   )
