@@ -14,6 +14,8 @@ export default function articleReducer (
     case 'FETCH_TOP_STORIES':
       return {...state, loading: false, topStories: action.payload.articles}
 
+    case 'FETCH_CHANNELS':
+      return {...state, loading: false, channels: action.payload.sources}
     default:
     return state;
 
