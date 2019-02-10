@@ -23,4 +23,14 @@ class TopStoriesContainer extends Component {
 
 }
 
+const mapStateToProps = state => {
+  return {topStories: state.articles.topStories}
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    
+  }
+}
+
 export default TopStoriesContainer;
