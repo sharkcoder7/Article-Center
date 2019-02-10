@@ -33,4 +33,18 @@ class ArticlesController < ApplicationController
     render json: @channel_articles, stats: 200
   end
 
+  def news_search
+    @search = Filter.create(article_params)
+
+    response = Faraday..get 'https://newsapi.org/v2/everything?' do |req|
+      req.params['apiKey'] = ENV['API_KEY']
+      req.params['q'] = params[:article][:query]
+      req.params['sortBy'] = 'relevancy'
+      req.params['language'] = 'en'
+    end
+
+    @source_articles = JSON.parse(response.body)
+    render json: @source_articles, status: 200
+  end
+
 end
