@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -34,12 +35,12 @@
 .App-navbar {
   border-style: outset;
   text-decoration-color: #C0B283;
-  color: #C0B283;
+  color: #0e1219;
   text-shadow: 2px 2px 4px #373737;
   border-radius: 21px;
   border: 4px solid #373737;
   padding: 20px;
-  background-image: url("banner.png");
+  background-image: url("banner.jpg");
 
 }
 
@@ -56,11 +57,21 @@
 
 .article {
   color: #373737;
+  border: 2px solid #373737;
+  border-radius: 21px;
+  
+}
+
+.channel {
+  color: #373737;
+  border: 2px solid #373737;
+  border-radius: 21px;
+  
 }
 
 .button {
   display: inline-block;
-  padding: 3px 12px;
+  padding: 2px 10px;
   font-size: 14px;
   cursor: pointer;
   text-align: center;
@@ -90,6 +101,18 @@ a:visited {
 a.article-link:hover, a.article-link:active {font-family: monospace;}
 
 a.article-link {
-  color: #c0b283;
+  color: #373737;
+  font-size: 16px;
+
+}
+
+h3.channel-link:hover, a.channel-link:active {font-family: monospace;}
+
+h3.channel-link {
+  
+  font-size: 16px;
+}
+
+.article-description {
   font-size: 14px
-;}
+}

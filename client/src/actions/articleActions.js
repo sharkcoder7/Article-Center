@@ -1,3 +1,4 @@
+//Get the top stories from API for top stories page
 export function fetchTopStories() {
   return (dispatch) => {
     dispatch({type: 'LOADING_ARTICLES'});
@@ -8,7 +9,7 @@ export function fetchTopStories() {
 }
 
 
-
+//Get channels from API for the browse channels page
 export function fetchChannels() {
   return (dispatch) => {
     dispatch({type: 'LOADING_ARTICLES'});
@@ -18,6 +19,8 @@ export function fetchChannels() {
   }
 }
 
+
+//Gets the articles for specified channel
 export function searchChannelArticles(channel) {
   return (dispatch) => {
     dispatch({type: 'LOADING_ARTICLES'});
@@ -28,6 +31,7 @@ export function searchChannelArticles(channel) {
 }
 
 
+//Posts search to Rails API and returns results
 export function searchArticles(query) {
   return (dispatch)  => {
     dispatch({type: 'SAVE_SEARCH_QUERY', payload: query})
