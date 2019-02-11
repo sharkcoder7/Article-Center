@@ -53,3 +53,12 @@ export function searchArticles(query) {
     .catch(error => dispatch({type: 'HANDLE_SEARCH_ERROR', payload: error}))
   }
 }
+
+export function getSearches() {
+  return (dispatch) => {
+    dispatch({type: 'FETCHING_SEARCHES'});
+    return fetch('api/searches')
+      .then(response => response.json())
+      .then(searches => dispatch({type: 'FETCH_RECENT_SEARCHES', payload: searches}))
+  }
+}

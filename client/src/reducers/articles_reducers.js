@@ -4,6 +4,7 @@ export default function articleReducer (
     topStories: [],
     channels: [],
     channelArticles: [],
+    searches: [],
     results: [],
     numresults: false,
     query: '',
@@ -32,7 +33,15 @@ export default function articleReducer (
       return {...state, loading: false, query: action.payload}
 
     case 'FETCH_FILTERED_ARTICLES':
-    return {...state, loading: false, results: action.payload.articles, numResults: action.payload.totalResults, searchDone: true}
+      return {...state, loading: false, results: action.payload.articles, numResults: action.payload.totalResults, searchDone: true}
+
+    case 'FETCHING_SEARCHES':
+      return {...state, loading: true}
+
+    case 'FETCH_RECENT_SEARCHES':
+      const searches = action.payload.map((payload) => payload.query)
+      return {...state, loading: false, searches: searches}
+    
 
     default:
       return state;

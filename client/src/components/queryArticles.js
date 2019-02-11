@@ -1,5 +1,6 @@
 import React from 'react';
 import Article from './article'
+import QueryInput from './queryInput';
 
 const QueryArticles = (props) => {
 
