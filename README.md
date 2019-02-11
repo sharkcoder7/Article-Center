@@ -2,9 +2,9 @@
 
 Article Center is an application that provides you with popular articles from various different news sources.
 
--Top Stories: Displays the recent popular stories from all sources.
--Browse Channels: Displays the different sources and allows you to see articles from specified source.
--Search Articles: Takes a keyword and returns articles related to said keyword.
+- Top Stories: Displays the recent popular stories from all sources.
+- Browse Channels: Displays the different sources and allows you to see articles from specified source.
+- Search Articles: Takes a keyword and returns articles related to said keyword.
 
 
 ## Installation
