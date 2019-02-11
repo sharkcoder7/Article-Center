@@ -30,3 +30,66 @@
     transform: rotate(360deg);
   }
 }
+
+.App-navbar {
+  border-style: outset;
+  text-decoration-color: #C0B283;
+  color: #C0B283;
+  text-shadow: 2px 2px 4px #373737;
+  border-radius: 21px;
+  border: 4px solid #373737;
+  padding: 20px;
+  background-image: url("banner.png");
+
+}
+
+.ui-tabular-stackable-menu {
+  text-decoration-color: white;
+  
+}
+
+.search {
+  background-color: #F4F4F4;
+  font-family: 'Franklin Gothic Medium';
+  font-style: oblique;
+}
+
+.article {
+  color: #373737;
+}
+
+.button {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+
+
+}
+
+.button:hover {background-color: #dcd0c0}
+
+.button:active {
+  background-color: #f4f4f4;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+a:visited {
+  color: #373737;
+}
+
+a.article-link:hover, a.article-link:active {font-family: monospace;}
+
+a.article-link {
+  color: #c0b283;
+  font-size: 14px
+;}

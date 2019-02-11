@@ -31,6 +31,9 @@ export default function articleReducer (
     case 'SAVE_SEARCH_QUERY':
       return {...state, loading: false, query: action.payload}
 
+    case 'FETCH_FILTERED_ARTICLES':
+    return {...state, loading: false, results: action.payload.articles, numResults: action.payload.totalResults, searchDone: true}
+
     default:
       return state;
 

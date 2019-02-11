@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom
 
 class QueryInput extends Component {
   state = {
-    text: ''
-    
+    text: '',
+    redirect: false
   }
 
 
@@ -24,7 +24,7 @@ class QueryInput extends Component {
       redirect: true
     })  
   }
-
+ 
   render() {
     if (this.state.redirect) {
       return (

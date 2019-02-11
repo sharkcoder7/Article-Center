@@ -12,14 +12,14 @@ class QueryContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search">
         <div id="query">
           <QueryInput searchArticles={this.props.searchArticles} />
 
         </div>
 
         <div>
-          <QueryArticles results={this.props.results} numResults={this.props.numResults}/> 
+          <QueryArticles results={this.props.results} numResults={this.props.numResults} searchDone={this.props.searchDone}/> 
         </div> 
       </div>
     )
