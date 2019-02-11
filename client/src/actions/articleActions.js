@@ -31,7 +31,7 @@ export function searchChannelArticles(channel) {
 export function searchArticles(query) {
   return (dispatch)  => {
     dispatch({type: 'SAVE_SEARCH_QUERY', payload: query})
-    return fetch('/api/news_search', {
+    return fetch('/api/articles_search', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

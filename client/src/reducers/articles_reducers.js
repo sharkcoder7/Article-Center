@@ -4,6 +4,10 @@ export default function articleReducer (
     topStories: [],
     channels: [],
     channelArticles: [],
+    results: [],
+    numresults: false,
+    query: '',
+    searchDone: false
   },
   action
 ) {
@@ -20,7 +24,13 @@ export default function articleReducer (
 
     case 'FETCH_CHANNEL_ARTICLES':
       return {...state, loading: false, channelArticles: action.payload.articles}
+
+    case 'HANDLE_SEARCH_ERROR':
+      return {...state, loading: false, results: [], numResults: action.payload.totalResults, searchDone: true}    
       
+    case 'SAVE_SEARCH_QUERY':
+      return {...state, loading: false, query: action.payload}
+
     default:
       return state;
 

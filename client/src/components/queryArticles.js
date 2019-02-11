@@ -11,7 +11,7 @@ const QueryArticles = (props) => {
 
   return(
     <div>
-      {renderResults()}
+      {renderSearch()}
     </div>
   )
 }

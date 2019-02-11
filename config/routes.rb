@@ -6,5 +6,7 @@ Rails.application.routes.draw do
       get '/topStories', to: 'articles#topStories'
       get '/channels', to: 'articles#channels'
       get '/channels/:channel', to: 'articles#channel_articles'
+      post'/articles_search', to: 'articles#articles_search'
+    
   end
 end

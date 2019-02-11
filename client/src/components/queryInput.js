@@ -13,13 +13,16 @@ class QueryInput extends Component {
 
   handleChange = event => {
     this.setState({
-      test: event.target.value
+      text: event.target.value
     })
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    this.props.searchArticles(this.state.text)  
+    this.props.searchArticles(this.state.text)
+    this.setState({
+      redirect: true
+    })  
   }
 
   render() {
