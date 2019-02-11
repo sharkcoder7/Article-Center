@@ -33,6 +33,7 @@ export function searchChannelArticles(channel) {
 
 //Posts search to Rails API and returns results
 export function searchArticles(query) {
+  console.log('C')
   return (dispatch)  => {
     dispatch({type: 'SAVE_SEARCH_QUERY', payload: query})
     return fetch('/api/articles_search', {
@@ -41,7 +42,7 @@ export function searchArticles(query) {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({article: {query: query}})
+      body: JSON.stringify({articles: {query: query}})
     })
     .then(response => {
       if (!response.ok) {
@@ -49,15 +50,18 @@ export function searchArticles(query) {
       }
       return response.json()
     })
-    .then(articles => dispatch({type: 'FETCH_FILTERED_ARTICLES', payload: articles}))
+    .then(articles =>{
+      console.log('D')
+      dispatch({type: 'FETCH_FILTERED_ARTICLES', payload: articles})})
     .catch(error => dispatch({type: 'HANDLE_SEARCH_ERROR', payload: error}))
   }
+  console.log("E")
 }
 
 export function getSearches() {
   return (dispatch) => {
     dispatch({type: 'FETCHING_SEARCHES'});
-    return fetch('api/searches')
+    return fetch('/api/searches')
       .then(response => response.json())
       .then(searches => dispatch({type: 'FETCH_RECENT_SEARCHES', payload: searches}))
   }

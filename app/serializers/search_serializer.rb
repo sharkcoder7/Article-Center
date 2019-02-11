@@ -1,4 +1,4 @@
 class SearchSerializer < ActiveModel::Serializer
-  attributes :query
+  attributes :query, :likes, :id
   
 end

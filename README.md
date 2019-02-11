@@ -1,24 +1,28 @@
-# README
+## Article Center
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Article Center is an application that provides you with popular articles from various different news sources.
 
-Things you may want to cover:
+-Top Stories: Displays the recent popular stories from all sources.
+-Browse Channels: Displays the different sources and allows you to see articles from specified source.
+-Search Articles: Takes a keyword and returns articles related to said keyword.
 
-* Ruby version
 
-* System dependencies
+## Installation
+Clone: 
 
-* Configuration
+```
+git clone git@github.com:deneb0618/Article-Center.git
 
-* Database creation
 
-* Database initialization
+Install dependencies and start server:
 
-* How to run the test suite
+```
+cd article_center
+bundle install
+cd client
+npm install
+rake start
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+This application is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

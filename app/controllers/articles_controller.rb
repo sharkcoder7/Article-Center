@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
       req.params['page'] = 1
 
     end
+  
     @headlines = JSON.parse(response.body)
     render json: @headlines, status: 200
   end
@@ -34,17 +35,22 @@ class ArticlesController < ApplicationController
   end
 
   def articles_search
-    @search = Search.create(article_params)
+    
+    @search = Search.create(articles_params)
     
     response = Faraday.get 'https://newsapi.org/v2/everything?' do |req|
       req.params['apiKey'] = ENV['SECRET_KEY']
-      req.params['q'] = params[:article][:query]
+      req.params['q'] = params[:articles][:query]
       req.params['sortBy'] = 'relevancy'
       req.params['language'] = 'en'
     end
 
     @query_articles = JSON.parse(response.body)
     render json: @query_articles, status: 200
+  end
+
+  def articles_params
+    params.require(:articles).permit(:query)
   end
 
 end

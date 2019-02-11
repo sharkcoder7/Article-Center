@@ -39,8 +39,7 @@ export default function articleReducer (
       return {...state, loading: true}
 
     case 'FETCH_RECENT_SEARCHES':
-      const searches = action.payload.map((payload) => payload.query)
-      return {...state, loading: false, searches: searches}
+      return {...state, loading: false, searches: action.payload}
     
 
     default:
